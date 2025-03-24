@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo y creación de formularios</title>
+</head>
+<body>
+    <!-- Etiqueta form, nos permite construir formularios para las necesidades del 
+     negocio, destro de stos bloques se coloca todos los campos y botones -->
+    <h2>
+        <p>Formulario de datos personales</p>
+    </h2>
+    <form
+        action="/cualquier_pagina.html"
+        autocomplete="on"
+        method="post"
+    >
+        <label>Ingrese su nombre completo*:</label>
+        <br>
+        <input 
+            type="text" 
+            name="nombre" 
+            required
+        >
+        <br>
+        <label>Ingrese su edad:</label>
+        <br>
+        <input type="number" 
+            name="edad" 
+            id="id-edad"
+            required
+        >
+        <br>
+        <label>Ingrese su correo electronico:</label>
+        <br>
+        <input 
+            type="email" 
+            name="correo" 
+            required
+        >
+        <br>
+        <label>Ingrese numero de identificación:</label>
+        <br>
+        <input 
+            type="number" 
+            name="DNI"
+        >
+        <br>
+        <label>casado</label>
+        <input 
+            type="radio" 
+            name="casado"
+        >
+        <label>soltero</label>
+        <input 
+            type="radio" 
+            name="soltero"
+        >
+        <br>
+        <label>Ingrese su telefono</label>
+        <input 
+            type="tel" 
+            name="telefono"
+        >
+        <br>
+        <label>Ingrese su fecha de nacimiento</label>
+        <br>
+        <input 
+            type="datetime-local" 
+            name="fecha"
+            required
+        >
+        <br>
+        <br>
+        <input type="submit" value="Enviar Formulario">
+        <br>
+        <br>
+        <p>Campos con "*" son requeridos</p>
+    </form>
+</body>
+</html>
