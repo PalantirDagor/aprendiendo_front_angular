@@ -1,0 +1,19 @@
+/*Estilos para el contenedor relativo*/
+.contenedor-relativo {
+    position: relative; /* Establece el contenedor como relativo */
+    width: 300px;
+    height: 200px;
+    border: 2px solid blue;
+    background-color: lightblue;
+}
+
+/* Estilos para la caja absoluta */
+.caja-absoluta {
+    position: absolute; /* Establece la caja como absoluta */
+    width: 100px;
+    height: 50px;
+    background-color: red;
+    color: white;
+    top: 50px; /* Posiciona la caja a 50px desde la parte superior del contenedor */
+    left: 100px; /* Posiciona la caja a 100px desde la parte izquierda del contenedor */
+}

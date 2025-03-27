@@ -1,0 +1,28 @@
+/*selector del tipo (elemento)*/
+li {
+    color: gray;
+    font-size: 18px;
+    text-decoration: overline;
+}
+
+/*selector de clase*/
+.item-destacado {
+    background-color: yellow;
+    padding: 5px;
+    text-decoration: line-through;
+}
+
+/* Selector de ID (especificidad alta)*/
+#lista-principal li {
+    font-weight: bold;
+    text-decoration: line-through;
+}
+
+/*ejemplko de !important (Sobreescribe cualquier otro estilo)*/
+li {
+    text-decoration: underline !important;
+}
+
+p {
+    color: aqua;
+}

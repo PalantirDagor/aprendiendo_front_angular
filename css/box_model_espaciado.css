@@ -1,0 +1,8 @@
+.caja {
+    width: 210px; /*Ancho de la caja*/
+    height: 100px; /*Alto de la caja*/
+    background-color: lightblue; /*Color del fondo*/
+    margin: 20px; /*margen de 20 pixeles en todos los lados*/
+    padding: 15px; /*Relleno de 15 pixeles en todos los lados*/
+    border: 5px solid red; /*Borde de 5 pixeles, solido y rojo*/
+}
