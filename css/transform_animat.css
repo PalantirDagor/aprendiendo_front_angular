@@ -1,0 +1,16 @@
+.caja-transicion {
+    width: 150px;
+    height: 150px;
+    background-color: #3498db;
+    margin: 50px auto;
+    border-radius: 5px;
+    cursor: pointer;
+    /* Propiedad transition: propiedad duración tipo-de-transición retraso; */
+    transition: background-color 0.5s ease-in-out, width 0.3s ease, height 0.3s ease;
+}
+
+.caja-transicion:hover {
+    background-color: #e74c3c; /*Color rojo la hacer el hover*/
+    width: 200px;
+    height: 200px;
+}

@@ -1,0 +1,40 @@
+.boton-combinado {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+    padding-left: 40px;
+    overflow: hidden;
+    transition: background-color 0.3 ease; /*transicion de color cuando se de el hover*/
+}
+
+.boton-combinado::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.boton-combinado:hover {
+    background-color: #0056b3;/*color mas oscuro cuando pasemos el mouse por el boton*/
+}
+
+.boton-descargar::before {
+    content: "\f019";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+
+.boton-editar::before {
+    content: "\270E";
+    font-size: 22px;
+}
+
+.texto-boton {
+    position: relative; /**/
+}
