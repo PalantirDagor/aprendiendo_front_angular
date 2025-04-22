@@ -1,0 +1,40 @@
+<p>directivas-estruct works!</p>
+<h2>Ejemplo de Directivas Estructurales</h2>
+
+<h3>*ngIf</h3>
+<button (click)="toggleMensaje()">Mostrar/Ocultar Mensaje</button>
+<div *ngIf="mostrarMensaje">
+  <p>Este mensaje se muestra o se oculta según el estado de 'mostrarMensaje'.</p>
+</div>
+<div *ngIf="!mostrarMensaje">
+  <p>El mensaje está oculto.</p>
+</div>
+
+<h3>*ngFor</h3>
+<ul>
+  <li *ngFor="let producto of productos; let i = index; let even = even; let odd = odd; let first = first; let last = last">
+    {{ i + 1 }}. {{ producto.nombre }} - ${{ producto.precio }}
+    <span *ngIf="first">(Primero)</span>
+    <span *ngIf="last">(Último)</span>
+    <span *ngIf="even" style="color: green;">(Par)</span>
+    <span *ngIf="odd" style="color: blue;">(Impar)</span>
+  </li>
+</ul>
+
+<h3>*ngSwitch</h3>
+<div>
+  Selecciona una opción:
+  <select [(ngModel)]="opcionSeleccionada">
+    <option value="1">Opción 1</option>
+    <option value="2">Opción 2</option>
+    <option value="3">Opción 3</option>
+    <option value="default">Default</option>
+  </select>
+</div>
+
+<div [ngSwitch]="opcionSeleccionada">
+  <p *ngSwitchCase="1">Has seleccionado la Opción 1.</p>
+  <p *ngSwitchCase="2">Estás viendo la Opción 2.</p>
+  <p *ngSwitchCase="3">Aquí está la Opción 3.</p>
+  <p *ngSwitchDefault>Esta es la opción por defecto.</p>
+</div>

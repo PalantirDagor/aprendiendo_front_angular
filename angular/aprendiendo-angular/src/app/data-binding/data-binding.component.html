@@ -1,0 +1,26 @@
+<p>data-binding works!</p>
+<!--los Tipos de Data Binding-->
+<!--Interpolación ({{ }}):-->
+<h1>Hola, {{ nombre }}!</h1>
+<p>Tu edad es: {{ edad }} años.</p>
+<p>{{ 2 + 2 }}</p> <!-- También puedes incluir expresiones simples -->
+
+<!--Property Binding ([]):-->
+
+<img [src]="imagenURL" alt="Imagen de ejemplo">
+<button [disabled]="estaDeshabilitado">Haz clic aquí</button>
+<div [class]="miClaseCSS">Este texto estará resaltado.</div>
+
+<!--Event Binding (()):-->
+<button (click)="incrementarContador()">Incrementar Contador</button>
+<p>Contador actual: {{ contador }}</p>
+
+<button (click)="mostrarMensaje($event)">Mostrar Mensaje</button>
+
+<input type="text" (input)="actualizarValor($any($event.target).value)">
+
+<!--Two-Way Binding ([()] o [(ngModel)]):-->
+
+<h2>Formulario con Two-Way Binding</h2>
+<input type="text" [(ngModel)]="nombreModelo" placeholder="Ingrese su nombre">
+<p>Nombre ingresado: {{ nombreModelo }}</p>

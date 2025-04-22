@@ -1,0 +1,13 @@
+.resaltado {
+  background-color: yellow;
+  padding: 5px;
+}
+
+.fondo-gris {
+  background-color: lightgray;
+  padding: 10px;
+}
+
+.texto-grande {
+  font-size: 1.5em;
+}

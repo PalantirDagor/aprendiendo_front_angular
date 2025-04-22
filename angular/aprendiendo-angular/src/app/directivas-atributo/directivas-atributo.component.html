@@ -1,0 +1,21 @@
+<p>directivas-atributo works!</p>
+<h2>Ejemplo de Directivas de Atributo</h2>
+
+<h3>[class]</h3>
+<div [class.resaltado]="estaResaltado">Este texto puede ser resaltado.</div>
+<button (click)="toggleResaltado()">Alternar Resaltado</button>
+
+<h3>[style]</h3>
+<p [style.color]="colorTexto">Este texto tiene un color dinámico.</p>
+<div>
+  <button (click)="cambiarColor('red')">Rojo</button>
+  <button (click)="cambiarColor('green')">Verde</button>
+  <button (click)="cambiarColor('blue')">Azul</button>
+</div>
+
+<h3>ngClass</h3>
+<div [ngClass]="clasesDinamicas">Este div tiene clases dinámicas aplicadas.</div>
+<button (click)="toggleFondoGris()">Alternar Fondo Gris</button>
+
+<h3>ngStyle</h3>
+<p [ngStyle]="estilosDinamicos">Este párrafo tiene estilos dinámicos.</p>
