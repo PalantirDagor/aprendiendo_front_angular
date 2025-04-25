@@ -1,0 +1,15 @@
+<h2>Lista de Usuarios</h2>
+
+<div *ngIf="errorMessage" style="color: red;">
+  {{ errorMessage }}
+</div>
+
+<ul *ngIf="usuarios.length > 0">
+  <li *ngFor="let user of usuarios">
+    {{ user.id }} - {{ user.name }} ({{ user.username }}): {{ user.email }}
+  </li>
+</ul>
+
+<p *ngIf="usuarios.length === 0 && !errorMessage">
+  Cargando usuarios...
+</p>
