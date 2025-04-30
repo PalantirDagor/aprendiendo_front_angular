@@ -13,7 +13,7 @@ export class SaludadorComponent {
 
   constructor(private saludoService: SaludoService) { }
 
-   saludar(): void {
+  saludar(): void {
     this.mensajeSaludo = this.saludoService.generarSaludo(this.nombreUsuario);
   }
 
