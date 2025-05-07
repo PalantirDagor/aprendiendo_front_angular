@@ -1,0 +1,6 @@
+<h2>Componente Padre enviando al Hijo @Input</h2>
+<app-hijo [mensajeDelPadre]="mensajeParaHijo" [contadorInicial]="valorInicial"></app-hijo>
+<br>
+<h2>Componente Padre recibiendo del Hijo @Output</h2>
+<p>Mensaje recibido del hijo: {{ mensajeRecibidoDelHijo }}</p>
+<app-hijo [mensajeDelPadre]="mensajeParaHijo" (eventoDesdeHijo)="recibirMensajeDelHijo($event)"></app-hijo>

@@ -7,9 +7,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { PrimerComponentComponent } from './modules/primer-component/primer-component.component';
 import { CicloVidaComponent } from './ciclo-vida/ciclo-vida.component';
-//import { DataBindingComponent } from './data-binding-directivas/data-binding/data-binding.component';
-//import { DirectivasEstructComponent } from './data-binding-directivas/directivas-estruct/directivas-estruct.component';
-//import { DirectivasAtributoComponent } from './data-binding-directivas/directivas-atributo/directivas-atributo.component';
 import { SaludadorComponent } from './saludador/saludador.component';
 import { ListaUsuariosComponent } from './lista-usuarios/lista-usuarios.component';
 import { RegistroComponent } from './registro/registro.component';
@@ -17,10 +14,16 @@ import { RegistroReactiveComponent } from './registro-reactive/registro-reactive
 import { RegistroCustomComponent } from './registro-custom/registro-custom.component';
 import { DataBindingDirectivasComponent } from './data-binding-directivas/data-binding-directivas.component';
 import { DataBindingDirectivasModule } from './data-binding-directivas/data-binding-directivas.module';
+import { ParamRutasComponent } from './param-rutas/param-rutas.component';
+import { ComunicacionComponent } from './comunicacion/comunicacion.component';
+import { ComunicacionModule } from './comunicacion/comunicacion.module';
 
 const appRoutes: Routes = [
   { path: 'inicio', component: AppComponent },
   { path: 'componentes-angular', component: CicloVidaComponent },
+  { path: 'data-bindig-directivas', component:  DataBindingDirectivasComponent},
+  { path: 'parametros-ruta/:id', component:  ParamRutasComponent},
+  { path: 'comunicacion', component:  ComunicacionComponent},
 ]
 
 @NgModule({
@@ -28,21 +31,19 @@ const appRoutes: Routes = [
     AppComponent,
     PrimerComponentComponent,
     CicloVidaComponent,
-    //DataBindingComponent,
-    //DirectivasEstructComponent,
-    //DirectivasAtributoComponent,
     SaludadorComponent,
     ListaUsuariosComponent,
     RegistroComponent,
     RegistroReactiveComponent,
     RegistroCustomComponent,
-    DataBindingDirectivasComponent
+    DataBindingDirectivasComponent,
+    ParamRutasComponent,
   ],
   imports: [
     BrowserModule, FormsModule,
     HttpClientModule, ReactiveFormsModule,
     RouterModule.forRoot(appRoutes), // Configura las rutas de nivel raíz
-    DataBindingDirectivasModule,
+    DataBindingDirectivasModule, ComunicacionModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

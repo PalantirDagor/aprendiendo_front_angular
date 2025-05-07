@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { CicloVidaComponent } from './ciclo-vida/ciclo-vida.component';
 
 @Component({
   selector: 'app-root',
