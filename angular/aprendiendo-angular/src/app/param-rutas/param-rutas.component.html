@@ -1,0 +1,11 @@
+<h2>Ejemplo de parametros de ruta</h2>
+<div *ngIf="usuario">
+  <h2>Detalle del Usuario</h2>
+  <p>ID: {{ usuario.id }}</p>
+  <p>Nombre: {{ usuario.name }}</p>
+  <p>Correo Electronico: {{ usuario.email }}</p>
+  <p>Direccion: {{ usuario.address.street }}</p>
+</div>
+<div *ngIf="!usuario">
+  Cargando datos del Usuario...
+</div>

@@ -7,6 +7,7 @@ export interface Usuario {
   name: string;
   username: string;
   email: string;
+  address: any;
   // ... otras propiedades del usuario
 }
 
