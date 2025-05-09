@@ -1,7 +1,24 @@
 <h2>Data Binding y Directivas Básicas</h2>
-<nav>
-  <a routerLink="/data-bindig-directivas/data-binding" routerLinkActive="active">Data binding</a> |
-  <a routerLink="/data-bindig-directivas/directivas-estructurales" routerLinkActive="active">Directivas Estructurales</a> |
-  <a routerLink="/data-bindig-directivas/directivas-atributo" routerLinkActive="active">directivas de Atributo</a>
-</nav>
-<router-outlet></router-outlet>
+<div class="sidebar">
+  <div class="logo">Contenido</div>
+  <ul class="menu-items">
+    <li routerLinkActive="active">
+      <a routerLink="/data-bindig-directivas/data-binding">
+        <i class="fas fa-home"></i> Data binding
+      </a>
+    </li>
+    <li routerLinkActive="active">
+      <a routerLink="/data-bindig-directivas/directivas-estructurales">
+        <i class="fas fa-box"></i> Directivas Estructurales
+      </a>
+    </li>
+    <li routerLinkActive="active">
+      <a routerLink="/data-bindig-directivas/directivas-atributo">
+        <i class="fas fa-cogs"></i> directivas de Atributo
+      </a>
+    </li>
+  </ul>
+</div>
+<div class="content">
+  <router-outlet></router-outlet>
+</div>

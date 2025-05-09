@@ -1,4 +1,30 @@
 <p>ciclo-vida works!</p>
 <h2>Ejemplo de Ciclo de Vida</h2>
 <h3>Componente Contador</h3>
-<p>Contador: {{ counter }}</p>
+<p>Contador: {{ contador }}</p>
+<h3>Pipes Estandar</h3>
+<h4>Pipe 'date'</h4>
+<p>Fecha Cruda: {{ fechaActual }}</p>
+<p>Formato Corto: {{ fechaActual | date:'short' }}</p>
+<p>Formato Medio: {{ fechaActual | date:'medium' }}</p>
+<p>Formato Largo: {{ fechaActual | date:'long' }}</p>
+<p>Formato Completo: {{ fechaActual | date:'full' }}</p>
+<p>Formato Personalizado (dd/MM/yyyy): {{ fechaActual | date:'dd/MM/yyyy' }}</p>
+<p>Formato Personalizado (EEEE, MMMM d, y): {{ fechaActual | date:'EEEE, MMMM d, y' }}</p>
+<br>
+<h4>Pipe 'currency'</h4>
+    <p>Precio Crudo: {{ precio }}</p>
+    <p>Formato Básico (USD): {{ precio | currency }}</p>
+    <p>Formato EUR (€): {{ precio | currency:'EUR' }}</p>
+    <p>Formato COP ($): {{ precio | currency:'COP' }}</p>
+    <p>Formato COP (Símbolo): {{ precio | currency:'COP':'symbol' }}</p>
+    <p>Formato EUR (Código): {{ precio | currency:'EUR':'code' }}</p>
+    <p>Formato USD (Símbolo Estrecho): {{ precio | currency:'USD':'symbol-narrow':'1.2-2' }}</p>
+<br>
+<h4>Pipe 'uppercase'</h4>
+<p>Texto Original: {{ texto }}</p>
+<p>En Mayúsculas: {{ texto | uppercase }}</p>
+<br>
+<h2>Pipe 'async'</h2>
+<p>Mensaje Observable: {{ mensaje$ | async }}</p>
+<p>Número de la Promesa: {{ numeroPromesa | async }}</p>

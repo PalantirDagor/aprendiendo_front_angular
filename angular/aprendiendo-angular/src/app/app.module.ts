@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { PrimerComponentComponent } from './modules/primer-component/primer-component.component';
@@ -17,6 +18,8 @@ import { DataBindingDirectivasModule } from './data-binding-directivas/data-bind
 import { ParamRutasComponent } from './param-rutas/param-rutas.component';
 import { ComunicacionComponent } from './comunicacion/comunicacion.component';
 import { ComunicacionModule } from './comunicacion/comunicacion.module';
+import { PipesOperAsyncComponent } from './pipes-oper-async/pipes-oper-async.component';
+import { PipesOperAsyncModule } from './pipes-oper-async/pipes-oper-async.module';
 
 const appRoutes: Routes = [
   { path: 'inicio', component: AppComponent },
@@ -24,6 +27,7 @@ const appRoutes: Routes = [
   { path: 'data-bindig-directivas', component:  DataBindingDirectivasComponent},
   { path: 'parametros-ruta/:id', component:  ParamRutasComponent},
   { path: 'comunicacion', component:  ComunicacionComponent},
+  { path: 'pipes-operaciones-async', component: PipesOperAsyncComponent },
 ]
 
 @NgModule({
@@ -40,10 +44,12 @@ const appRoutes: Routes = [
     ParamRutasComponent,
   ],
   imports: [
+    CommonModule,
     BrowserModule, FormsModule,
     HttpClientModule, ReactiveFormsModule,
     RouterModule.forRoot(appRoutes), // Configura las rutas de nivel raíz
     DataBindingDirectivasModule, ComunicacionModule,
+    PipesOperAsyncModule
   ],
   providers: [],
   bootstrap: [AppComponent]

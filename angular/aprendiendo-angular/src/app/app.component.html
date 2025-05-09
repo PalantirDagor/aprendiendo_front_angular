@@ -18,12 +18,34 @@
 
 <!--<app-registro-custom></app-registro-custom>-->
 
-<nav>
-  <a routerLink="/inicio" routerLinkActive="active">Inicio</a> |
-  <a routerLink="/componentes-angular" routerLinkActive="active">Componentes en Angular</a> |
-  <a routerLink="/data-bindig-directivas" routerLinkActive="active">Data Binding y Directivas</a> |
-  <a routerLink="/parametros-ruta" routerLinkActive="active">Módulos y Routing</a> |
-  <a routerLink="/comunicacion" routerLinkActive="active">Comunicación entre Componentes</a>
+<nav class="top-nav">
+  <ul class="menu-items">
+    <li routerLinkActive="active">
+      <a routerLink="/inicio">Inicio</a>
+    </li>
+    <li class="separator"></li>
+    <li routerLinkActive="active">
+    </li>
+    <a routerLink="/componentes-angular">Componentes en Angular</a>
+    <li class="separator"></li>
+    <li routerLinkActive="active">
+      <a routerLink="/data-bindig-directivas">Data Binding y Directivas</a>
+    </li>
+    <li class="separator"></li>
+    <li routerLinkActive="active">
+      <a routerLink="/parametros-ruta">Módulos y Routing</a>
+    </li>
+    <li class="separator"></li>
+    <li routerLinkActive="active">
+      <a routerLink="/comunicacion">Comunicación entre Componentes</a>
+    </li>
+    <li class="separator"></li>
+    <li routerLinkActive="active">
+      <a routerLink="/pipes-operaciones-async">Pipes y Operaciones Asíncronas</a>
+    </li>
+  </ul>
 
 </nav>
-<router-outlet></router-outlet>
+<div class="content">
+  <router-outlet></router-outlet>
+</div>
