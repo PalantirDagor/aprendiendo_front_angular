@@ -1,0 +1,25 @@
+<h2>Comunicación entre Componentes</h2>
+<br>
+<nav class="top-nav">
+  <ul class="menu-items">
+    <li routerLinkActive="active">
+      <a routerLink="/servicios-routing-forms/comunicacion/padre">Componente Padre @Input</a>
+    </li>
+    <li class="separator"></li>
+    <li routerLinkActive="active">
+      <a routerLink="/servicios-routing-forms/comunicacion/hijo">Componente Hijo @Output</a>
+    </li>
+    <li class="separator"></li>
+    <li routerLinkActive="active">
+      <a routerLink="/servicios-routing-forms/comunicacion/vista-a">Componente Vista A comunicación por servicio</a>
+    </li>
+    <li class="separator"></li>
+    <li routerLinkActive="active">
+      <a routerLink="/servicios-routing-forms/comunicacion/vista-b">Componente Vista B comunicación por servicio</a>
+    </li>
+  </ul>
+
+</nav>
+<div class="content">
+  <router-outlet></router-outlet>
+</div>

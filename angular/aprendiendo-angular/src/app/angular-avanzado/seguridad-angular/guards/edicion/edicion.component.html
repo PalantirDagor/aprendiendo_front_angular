@@ -1,0 +1,8 @@
+<h2>Página de Edición</h2>
+<p>Simulación de un formulario con cambios pendientes.</p>
+<label>
+  Contenido:
+  <!--<input type="text" [(ngModel)]="contenido" (input)="hasChanges = true">-->
+</label>
+<p *ngIf="hasChanges" style="color: orange;">¡Tienes cambios pendientes!</p>
+<button (click)="guardar()">Guardar Cambios</button>

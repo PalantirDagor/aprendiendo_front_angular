@@ -1,0 +1,14 @@
+<h2>Módulos y Routing</h2>
+<br>
+<h3>Parámetros en rutas y ActivatedRoute</h3>
+<h3>Ejemplo de parámetros de ruta</h3>
+<div *ngIf="usuario">
+  <h3>Detalle del Usuario</h3>
+  <p>ID: {{ usuario.id }}</p>
+  <p>Nombre: {{ usuario.name }}</p>
+  <p>Correo Electronico: {{ usuario.email }}</p>
+  <p>Direccion: {{ usuario.address.street }}</p>
+</div>
+<div *ngIf="!usuario">
+  Cargando datos del Usuario...
+</div>

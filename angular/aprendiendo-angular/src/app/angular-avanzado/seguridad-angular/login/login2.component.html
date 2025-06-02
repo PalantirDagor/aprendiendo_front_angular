@@ -1,0 +1,17 @@
+<h2>Iniciar Sesión</h2>
+<div *ngIf="!isAuthenticated">
+  <div>
+    <label for="username">Usuario:</label>
+    <input id="username" type="text" [(ngModel)]="username" name="username">
+  </div>
+  <div>
+    <label for="password">Contraseña:</label>
+    <input id="password" type="password" [(ngModel)]="password" name="password">
+  </div>
+  <button (click)="onLogin()">Login</button>
+</div>
+<div *ngIf="isAuthenticated">
+  <p>Estás autenticado.</p>
+  <button (click)="onLogout()">Logout</button>
+</div>
+<p>Usa 'user' y 'password' para iniciar sesión.</p>

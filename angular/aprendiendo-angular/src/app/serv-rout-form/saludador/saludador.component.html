@@ -1,0 +1,10 @@
+<h2>Servicios e Inyección de Dependencias</h2>
+<br>
+<h3>Saludador</h3>
+<div>
+  <label for="nombre">Ingrese su nombre:</label>
+  <input type="text" id="nombre" [(ngModel)]="nombreUsuario">
+</div>
+<button (click)="saludar()">Saludar</button>
+<p *ngIf="mensajeSaludo">{{ mensajeSaludo }}</p>
+

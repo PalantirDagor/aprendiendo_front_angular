@@ -1,0 +1,16 @@
+<h2>Contenido Protegido</h2>
+<p>Solo accesible si estás autenticado. El token se envía vía interceptor.</p>
+<button (click)="getProtectedData()">Obtener Datos Protegidos</button>
+<div *ngIf="protectedData">
+  <h3>Datos Protegidos:</h3>
+  <pre>{{ protectedData | json }}</pre>
+</div>
+<div *ngIf="errorMensaje" style="color: red;">
+  <p>{{ errorMensaje }}</p>
+</div>
+
+<h3>Datos Públicos (sin token):</h3>
+<p>Esto demuestra que el interceptor solo añade el token si existe.</p>
+<div *ngIf="publicData">
+  <pre>{{ publicData | json }}</pre>
+</div>
